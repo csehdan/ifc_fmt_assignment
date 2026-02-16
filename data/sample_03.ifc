@@ -1,0 +1,43 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('sample_messy_03.ifc','2026-01-22T11:20:58',('Jonas Jonaitis'),(''),'John&John','', '');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+
+DATA;
+#1=IFCPERSON($,$,'Geom',$,$,$,$,$);
+#2=IFCORGANIZATION($,'Org',$,$,$);
+#3=IFCPERSONANDORGANIZATION(#1,#2,$);
+#4=IFCAPPLICATION(#2,'1.0','App','AppId');
+#5=IFCOWNERHISTORY(#3,#4,$,.ADDED.,$,$,$,0);
+#6=IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#7=IFCUNITASSIGNMENT((#6));
+
+#10 = IFCCARTESIANPOINT( (0.,0.,0.) );
+#11=IFCAXIS2PLACEMENT3D(#10,$,$);
+#12=IFCGEOMETRICREPRESENTATIONCONTEXT($,'Model',3,1.E-05,#11,$);
+#13=IFCPROJECT('9$7jH1N1H9Qf8O2rK5jEX',#5,'P3',$,$,$,$,(#12),#7);
+
+#30 = IFCCARTESIANPOINTLIST3D(
+ ( (0.,0.,0.),
+   (1.,0.,0.),
+   (1.,1.,0.),
+   (0.,1.,0.) )
+);
+
+#31=IFCCARTESIANPOINTLIST2D(((0.,0.),(2.5,0.),(2.5,2.5),(0.,2.5)));
+
+#32 = IFCINDEXEDPOLYCURVE(
+   #31 ,
+   ( (1,2),(2,3),(3,4),(4,1) ) ,
+   $ );
+
+#33=IFCAXIS2PLACEMENT3D(#10,$,$);  #34=IFCLOCALPLACEMENT($,#33);
+
+#35 = IFCSITE('7$S1t3Gu1D___0000000001',#5,'S3',$,$,#34,$,$,.ELEMENT.,$,$,$,$,$);
+
+#36=IFCRELAGGREGATES('7$AggGu1D___0000000002',#5,$,$,#13,(#35));
+
+ENDSEC;
+END-ISO-10303-21;
