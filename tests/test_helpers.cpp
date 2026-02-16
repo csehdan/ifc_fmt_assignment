@@ -2,8 +2,8 @@
 //
 //#define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do
 //
-////#include "../../../catchorg-Catch2-31b1109/src/catch2/catch_all.hpp"
-//#include "../vcpkg_installed/x64-windows/include/catch.hpp"
+//#include <externals/Catch2>
+//
 //#include "../src/helpers.h"
 //
 //
