@@ -112,7 +112,7 @@ int IfcBlock::MergeLines(bool onlyDataBlocks)
 	auto par = ValidateParentheses();
 	if (par > 0)
 	{
-		fprintf(stderr, "ccc");
+		fprintf(stderr, "wrong parentheses");
 		return 1;
 	}
 
@@ -151,7 +151,6 @@ int IfcBlock::ValidateParentheses()
 
 		if (!valid)
 		{
-			fprintf(stderr, "wrong parentheses");
 			return 1;
 		}
 	}

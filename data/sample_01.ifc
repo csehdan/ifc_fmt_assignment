@@ -7,7 +7,7 @@ ENDSEC;
 
 DATA;
   #1 = IFCPERSON ( $ , $ , 'Jo''nas' , $,$,$,$,$ )  ;
-#2=IFCORGANIZA)TION($,'Org' ,$,$,$);   #3 = IFCPERSONANDORGANIZATION( #1 , #2 , $ ) ;
+#2=IFCORGANIZATION($,'Org' ,$,$,$);   #3 = IFCPERSONANDORGANIZATION( #1 , #2 , $ ) ;
 #4=IFCAPPLICATION( #2,'1.0' ,
 'App'  ,'AppId' ) ;
 

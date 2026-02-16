@@ -1,7 +1,7 @@
 #include <iostream>;
 #include "ifcParser.h"
 
-#define DEBUG 1
+#define DEBUG 0
 
 int main(int argc, char **argv)
 {
@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
     if (strcmp(argv[1], argv[2]) == 0)
     {
-        fprintf(stderr, "outfile should differ from infile");
+        fprintf(stderr, "Outfile should differ from infile.");
     }
 
     std::string param1 = argv[1];

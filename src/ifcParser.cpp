@@ -155,7 +155,9 @@ int IfcParser::Format()
 
 void IfcParser::PrintConsole()
 {
-	for (const auto& line : GetAllProcessedLines())
+	auto lines = GetAllProcessedLines();
+
+	for (const auto& line : lines)
 	{
 		std::cout << line << std::endl;
 	}
