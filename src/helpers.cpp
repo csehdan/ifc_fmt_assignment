@@ -39,20 +39,6 @@ int Helpers::CountOccurrences(const std::string& line, char oc, bool excludeEsca
 	return count;
 }
 
-std::string Helpers::RemoveWhitespaces(const std::string& str)
-{
-	// https://regex101.com/r/wC6gZ2/1
-
-	//std::regex pattern("\'\.*\'");
-	std::regex pattern("\'\[^']*\'");
-	//std::regex pattern("[^\\]\'[^']*[^\\]\'"); // don't undestand why [^'] does the job instead of \. Why will a contained ' not triggered as closing quote
-
-	std::smatch matchResult;
-	std::string gec = regex_replace(str, pattern, "");
-	std::regex_search(str, matchResult, pattern);
-	return gec;
-//	s.erase(remove_if(s.begin(), s.end(), ::isspace), s.end());
-}
 
 std::string Helpers::RemoveUnquotedWhitespaceExplicit(const std::string& s)
 {
